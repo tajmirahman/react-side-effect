@@ -3,7 +3,7 @@ import { useState } from "react"
 
 export default function User(){
 
-    const [user, setUser]=useState([]);
+    const [users, setUser]=useState([]);
 
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -15,7 +15,7 @@ export default function User(){
 
     return(
         <div>
-            <h3>User : {user.length} </h3>
+            <h3>User : {users.length} </h3>
         </div>
     )
 }
